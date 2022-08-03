@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <script src="./script.js" defer></script>
+    <title>MetaCube Parking</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar bg-dark">
+        <div class="container">
+            <h1 class="logo lg-heading text-light">MetaPark</h1>
+            <ul class="nav-items">
+                <li class="nav-item"><a href='#empSec'>Add Employee</a></li>
+                <li class="nav-item"><a href='#vehSec'>Add Vehicle</a></li>
+                <li class="nav-item"><a href='#feedSec'>Give Feedback</a></li>
+                <li class="nav-item"><a href='#priceSec'>Pricing</a></li>
+            </ul>
+        </div>  
+    </nav>    
+    <!-- Header Section having header content and banner both -->
+    <header class="header">
+        <!-- Header Content -->
+        <div class="header-content">
+            <h1 class="lg-heading text-light main-heading">Welcome to MetaCube Parking</h1>
+            <p class="text-light">Life is a journey, but don't worry, you'll find a parking spot at the end</p>
+            <a href=https://www.metacube.com class="btn btn-primary text-light md-heading">Exlpore Metacube</a>
+        </div>
+    </header>
+    <!-- Add Employee Section -->
+    <section class="utl-section" id="empSec">
+        <div class="container section-border">
+            <input type="checkbox" name="" id="emp" hidden checked>
+            <label for="emp" class="utl-Nav" ><h1 class="lg-heading">Add Employee</h1></label>
+            <form action="" class="formbody">
+                <label for="" id="empLabel">Hi, </label>
+                <div class="form-item full-name">
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" required>
+                </div>
+                <div class="form-item form-gender1 show-input">
+                    <label for="gender">Gender:</label>
+                    <div class="rightClass">
+                        <input type="radio" name="gender" id="male" value="male">&nbsp;Male
+                        <input type="radio" name="gender" id="female" value="female">&nbsp;Female
+                    </div>
+                </div>
+                <div class="form-item form-email show-input">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
+                </div>
+                <div class="form-item form-password show-input">
+                    <label for="pass">Password:</label>
+                    <input type="password" name="pass" id="pass" required pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g">
+                </div>
+                <div class="form-item form-confirm show-input">
+                    <label for="conf-pass">Confirm Password:</label>
+                    <input type="password" name="conf-pass" id="conf-pass" required pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g">
+                </div>
+                <div class="form-item form-phone show-input">
+                    <label for="phNo">Contact Number:</label>
+                    <input type="number" name="phNo" id="phNo" required pattern="[7-9]{1}[0-9]{9}">
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Add Vehicle Section -->
+    <section class="utl-section" id="vehSec">
+        <div class="container">
+            <input type="checkbox" name="" id="vehi" hidden checked>
+            <label for="vehi" class="utl-Nav"><h1 class="lg-heading">Add Vehicle</h1></label>
+            <form action="" class="formbody">
+                <label for="" id="vehi-label" style="margin-left: 2%;"></label>
+                <div class="form-item company-block">
+                    <label for="company">Vehicle Company:</label>
+                    <input type="text" name="company" id="company" required>
+                </div>
+                <div class="form-item vehicle-model-block show-input">
+                    <label for="model">Vehicle Model</label>
+                    <input type="text" name="" id="model" required>
+                </div>
+                <div class="form-item form-gender2 vehicle-type-block show-input">
+                    <label for="v_type">Vehicle Type</label>
+                    <div class="rightClass">
+                        <input type="radio" name="v_type" id="cycle" value="cycle">&nbsp;Cycle
+                        <input type="radio" name="v_type" id="motorcycle" value="motorcycle">&nbsp;Motor Cycle
+                        <input type="radio" name="v_type" id="fourwheeler" value="fourwheeler">&nbsp;Four Wheeler
+                    </div>
+                </div>
+                <div class="form-item vehicle-number-block show-input">
+                    <label for="v-number">Vehicle Number</label>
+                    <input type="text" name="vehicle-number" id="v-number" required>
+                </div>
+                <div class="form-item employee-id-block show-input">
+                    <label for="emp-id">Employee Id</label>
+                    <input type="text" name="employee-id" id="emp-id">
+                </div>
+                <div class="form-item identification-block show-input">
+                    <textarea name="identification" id="identify" cols="60" rows="10" placeholder="Identification" required></textarea>
+                </div>
+                <div class="form-item employee-price-block show-input">
+                    <label for="price">Choose a plan:</label>
+                    <select name="price" id="price">
+                        <option value="volvo"></option>
+                        <option value="saab"></option>
+                        <option value="mercedes"></option>
+                    </select>
+                </div>
+                <div class="btn-box show-input">
+                    <button type="submit" class="btn btn-secondary">Add Vehicle</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Add FeedBack Section -->
+    <section class="utl-section" id="feedSec">
+        <div class="container">
+            <div class="feedbox-main">
+                <div class="msg-img-box">
+                   <img src="./envelope-icon.png" alt="" style="filter: invert(60%) sepia(86%) saturate(3578%) hue-rotate(159deg) brightness(91%) contrast(101%);">
+                </div>
+                <div class="feed-box">
+                    <h2>Get in Touch</h2>
+                    <form action="" class="feed-form-box">
+                        <input type="text" name="" id="" placeholder="Join Doe" required>
+                        <input type="email" name="" id="" placeholder="Email" required>
+                        <input type="text" name="" id="" placeholder="Subject"required>
+                        <textarea name="" id="" cols="60" rows="10" placeholder="Message" required></textarea>
+                        <button type="submit" class="btn btn-secondary">Send Email</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section -->
+    <section class="pricing show-input" id="priceSec">
+        <div class="container">
+            <div class="utl-price-main">
+                <div class="utl-price-box">
+                    <div class="price-view">
+                        <h4>Cycle</h4>
+                        <div class="price-circle">
+                            <h2>$100</h2>
+                            <p>/month</p>
+                        </div>
+                    </div>
+                    <div class="detailed-price">
+                        <p>$5 Daily <br> $100 Monthly <br> $500 Yearly</p>
+                    </div>
+                    <div class="price-btn">
+                        <button type="button" class="btn btn-secondary">PURCHASE NOW</button>
+                    </div>
+                </div>
+                <div class="utl-price-box">
+                    <div  class="price-view">
+                        <h4>MotorCycle</h4>
+                        <div class="price-circle">
+                            <h2>$200</h2>
+                            <p>/month</p>
+                        </div>
+                    </div>
+                    <div class="detailed-price">
+                        <p>$10 Daily <br> $200 Monthly <br> $1000 Yearly</p>
+                    </div>
+                    <div class="price-btn">
+                        <button type="button" class="btn btn-secondary">PURCHASE NOW</button>
+                    </div>
+                </div>
+                <div class="utl-price-box">
+                    <div class="price-view">
+                        <h4>Four Wheeler</h4>
+                        <div class="price-circle">
+                            <h2>$500</h2>
+                            <p>/month</p>
+                        </div>
+                    </div>
+                    <div class="detailed-price">
+                        <p>$20 Daily <br> $500 Monthly <br> $3500 Yearly</p>
+                    </div>
+                    <div class="price-btn">
+                        <button type="button" class="btn btn-secondary">PURCHASE NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
